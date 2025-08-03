@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Page</title>
+<link rel="stylesheet" href="explore.css">
+<style>
+    /* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('3r.jpg');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    
+}
+
+/* Order page styling */
+.order-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.order-img {
+    width: 450px;
+    height: auto;
+    border: 1px;
+    border-style: solid;
+    border-radius: 35%;
+
+}
+
+.order-container h6 {
+    margin: 10px 0;
+}
+#orderName{
+color:white;
+font-weight: bolder;
+font-size: 40px;
+}
+#orderPrice{
+    color:white;
+    font-weight: bolder;
+    font-size: 40px;
+}
+/* Button styling */
+.my-button {
+    background-color: #001eff;
+    color: white;
+    border: none;
+    padding: 20px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.my-button:hover {
+    background-color: #e90078;
+}
+
+</style>
+</head>
+<body>
+<div class="order-container">
+<img id="orderImage" alt="" class="order-img">
+<h6 id="orderName"></h6>
+<h6 id="orderPrice"></h6>
+<button class="my-button" id="payButton">Pay 50%</button>
+</div>
+
+<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const imageSrc = localStorage.getItem('imageSrc');
+    const name = localStorage.getItem('name');
+    const price = localStorage.getItem('price');
+
+    document.getElementById('orderImage').src = imageSrc;
+    document.getElementById('orderName').textContent = name;
+    document.getElementById('orderPrice').textContent = `Price: $${price}`;
+
+    paypal.Buttons({
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{
+            amount: {
+              value: (price / 2).toFixed(2)
+            }
+          }]
+        });
+      },
+      onApprove: (data, actions) => {
+        return actions.order.capture().then(details => {
+          alert('Transaction completed by ' + details.payer.name.given_name);
+        });
+      }
+    }).render('#payButton');
+  });
+</script>
+</body>
+</html>

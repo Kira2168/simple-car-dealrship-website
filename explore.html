@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<link rel="stylesheet" href="explore.css">
+<script>
+  function orderNow(imageSrc, name, price) {
+    localStorage.setItem('imageSrc', imageSrc);
+    localStorage.setItem('name', name);
+    localStorage.setItem('price', price);
+    window.location.href = 'order.html';
+  }
+</script>
+</head>
+<body style="background-color:gray;">
+<nav class="navbar" id="home">
+<div class="navdiv">
+<div class="image">
+<img src="Car-Logo-PNG-Transparent.png" alt="" class="vg">
+</div>
+<ul>
+<li>
+<button>
+<a href="home.html" class="bh">Back to Home Page</a>
+</button>
+</li>
+<li> <a href="#lx">Luxury Cars</a> </li>
+<li> <a href="#sp">Sport Cars</a> </li>
+<li> <a href="#se">Sedan</a> </li>
+<li> <a href="#su">Suv</a> </li>
+</ul>
+</div>
+</nav>
+
+<h1 class="lc" id="lx">Luxury Cars</h1>
+<div class="container">
+<div class="d1">
+<img src="bu.jpeg" alt="" class="bug">
+<h6>Bugati</h6>
+<button class="my-button" onclick="orderNow('bu.jpeg', 'Bugati', '2000000')">ORDER NOW</button>
+</div>
+<div class="d2">
+<img src="lam.jpeg" alt="" class="lam">
+<h6>Lamborgini</h6>
+<button class="my-button" onclick="orderNow('lam.jpeg', 'Lamborgini', '1800000')">ORDER NOW</button>
+</div>
+<div class="d3">
+<img src="merc.jpeg" alt="" class="mer">
+<h6>Merchedes</h6>
+<button class="my-button" onclick="orderNow('merc.jpeg', 'Merchedes', '1500000')">ORDER NOW</button>
+</div>
+<div class="d4">
+<img src="fer.jpeg" alt="" class="fer">
+<h6>Ferrari</h6>
+<button class="my-button" onclick="orderNow('fer.jpeg', 'Ferrari', '2200000')">ORDER NOW</button>
+</div>
+<div class="d5">
+<img src="as.jpeg" alt="" class="as">
+<h6>Aston Martin</h6>
+<button class="my-button" onclick="orderNow('as.jpeg', 'Aston Martin', '1900000')">ORDER NOW</button>
+</div>
+<div class="d6">
+<img src="2013-Pagani-Huayra-studio.jpg" alt="" class="huy">
+<h6>Pagani</h6>
+<button class="my-button" onclick="orderNow('2013-Pagani-Huayra-studio.jpg', 'Pagani', '2500000')">ORDER NOW</button>
+</div>
+<div class="d7">
+<img src="307682813300.jpeg" alt="" class="jep">
+<h6>Land crusier</h6>
+<button class="my-button" onclick="orderNow('307682813300.jpeg', 'Land crusier', '900000')">ORDER NOW</button>
+</div>
+<div class="d8">
+<img src="rolels.jpeg" alt="" class="rol">
+<h6>Rols Royce</h6>
+<button class="my-button" onclick="orderNow('rolels.jpeg', 'Rols Royce', '2100000')">ORDER NOW</button>
+</div>
+</div>
+<main>
+    
+<h1 class="sc" id="sp"> Sport Car's</h1>
+<div class="cont2">
+<div class="it1">
+    <img src="ferrari.jpg" alt="" class="SP1">
+    <h6>Ferrari-f6</h6>
+    <button class="my-button" onclick="orderNow('ferrari.jpg', 'Ferrari-f6', '3100000')">ORDER NOW</button>
+</div>
+<div class="it2">
+    <img src="Ford GT.avif" alt="" class="SP2">
+    <h6>Ford</h6>
+    <button class="my-button" onclick="orderNow('Ford GT.avif', 'Ford', '1100000')">ORDER NOW</button>
+</div>
+<div class="it3">
+    <img src="Jaguar-C-X75.jpg" alt="" class="SP3">
+    <h6>Jaguar-C-X75</h6>
+    <button class="my-button" onclick="orderNow('Jaguar-C-X75.jpg', 'Jaguar-C-X75', '1000000')">ORDER NOW</button>
+</div>
+<div class="it4"><img src="Audi R8 GT3.avif" class="SP4">
+    <h6>Audi R8 Gt3</h6>
+    <button class="my-button" onclick="orderNow('Audi R8 GT3.avif', 'Audi R8 Gt3', '2200000')">ORDER NOW</button>
+</div>
+<div class="it5">
+    <img src="Audi R8.webp" alt="" class="SP5">
+    <h6>Audi R8</h6>
+    <button class="my-button" onclick="orderNow('Audi R8.webp', 'Audi R8', '2300000')">ORDER NOW</button>
+</div>
+<div class="it6">
+    <img src="pexels-garvin-st-villier .jpg" alt="" class="SP6">
+    <h6>pexels-garvin</h6>
+    <button class="my-button" onclick="orderNow('pexels-garvin-st-villier .jpg', 'pexels-garvin', '2500000')">ORDER NOW</button> 
+</div>
+<div class="it7">
+    <img src="Aventador LP700.jpeg" alt="" class="SP7">
+    <h6>Aventador Lp700</h6>
+    <button class="my-button" onclick="orderNow('Aventador LP700.jpeg', 'Aventador Lp700', '2600000')">ORDER NOW</button>
+</div>
+<div class="it8"> 
+    <img src="Lamnorghini Aventador.jpg" alt="" class="SP8">
+    <h6>Lamborgini R-233</h6>
+    <button class="my-button" onclick="orderNow('Lamnorghini Aventador.jpg', 'Lamborgini R-233', '2700000')">ORDER NOW</button>
+</div>
+</div>
+</main>
+<section>
+
+    <h1 class="dn" id="se"> Sedan</h1>
+    <div class="cont3">
+    <div class="iv1">
+       <img src="hy.jpeg" alt="" class="sed1"> 
+       <h6>Hyundai</h6>
+       <button class="my-button" onclick="orderNow('hy.jpeg', 'Hyundai', '410000')">ORDER NOW</button>
+    </div>
+    <div class="iv2">
+        <img src="ni.jpeg" alt="" class="sed2">
+        <h6>Nissan</h6>
+        <button class="my-button" onclick="orderNow('ni.jpeg', 'Nissan', '2800000')">ORDER NOW</button>
+    </div>
+    <div class="iv3">
+        <img src="lex.jpeg" alt="" class="sed3" >
+        <h6>Lexus</h6>
+        <button class="my-button" onclick="orderNow('lex.jpeg', 'Lexus', '2100000')">ORDER NOW</button>
+    </div>
+    <div class="iv4">
+        <img src="OIP.jpeg" alt="" class="sed4">
+        <h6>OIP-s40</h6>
+        <button class="my-button" onclick="orderNow('OIP.jpeg', 'OIP-s40', '1500000')">ORDER NOW</button>
+    </div>
+    <div class="iv5">
+        <img src="ho.jpeg" alt="" class="sed5">
+        <h6>Honda</h6>
+        <button class="my-button" onclick="orderNow('ho.jpeg', 'Honda', '1100000')">ORDER NOW</button>
+    </div>
+    <div class="iv6">
+        <img src="mitsu.jpeg" alt="" class="sed6">
+        <h6>Mitsbushi</h6>
+        <button class="my-button" onclick="orderNow('mitsu.jpeg', 'Mitsbush', '1800000')">ORDER NOW</button>
+    </div>
+    <div class="iv7">
+        <img src="wols.jpeg" alt="" class="sed7"> 
+        <h6>Woleswagen</h6>
+        <button class="my-button" onclick="orderNow('wols.jpeg', 'Woleswagen', '1600000')">ORDER NOW</button>
+    </div>
+    <div class="iv8">
+        <img src="chev.jpeg" alt="" class="sed8">
+        <h6>Cheverolet</h6>
+        <button class="my-button" onclick="orderNow('chev.jpeg', 'Cheverole', '3000000')">ORDER NOW</button>
+    </div>
+    </div> 
+</section>
+<footer>
+    <h1 class="uv" id="su"> Suv</h1>
+    <div class="cont4">
+    <div class="ib1">
+        <img src="BMW-X5-X6-M-Competition-5.avif" alt="" class="suv1">
+        <h6>BMW-X5</h6>
+        <button class="my-button" onclick="orderNow('BMW-X5-X6-M-Competition-5.avif', 'BMW-X5', '2180000')">ORDER NOW</button>
+    </div>
+    <div class="ib2">
+        <img src="hub-img-corolla-cross.jpg" alt="" class="suv2">
+        <h6>Corolla</h6>
+        <button class="my-button" onclick="orderNow('hub-img-corolla-cross.jpg', 'Corolla', '2100000')">ORDER NOW</button>
+    </div>
+    <div class="ib3"> <img src="bronco-2-largesuvs.jpg" alt="" class="suv3">
+        <h6>Bronco</h6>
+        <button class="my-button" onclick="orderNow('bronco-2-largesuvs.jpg', 'Bronco', '5700000')">ORDER NOW</button>
+    </div>
+    <div class="ib4">
+        <img src="25_FRD_EPR_0933_billboard.jpg" alt="" class="suv4">
+        <h6>Billboard-Fd</h6>
+        <button class="my-button" onclick="orderNow('25_FRD_EPR_0933_billboard.jpg', 'Billboard-Fd', '9100000')">ORDER NOW</button>
+    </div>
+    <div class="ib5">
+        <img src="Range-Rover-Sport-Eiger-Grey-Satin-798x466.jpg" alt="" class="suv5">
+        <h6>Range-Rover</h6>
+        <button class="my-button" onclick="orderNow('Range-Rover-Sport-Eiger-Grey-Satin-798x466.jpg', 'Range-Rover', '2100000')">ORDER NOW</button>
+    </div>
+    <div class="ib6">
+        <img src="Tesla.webp" alt="" class="suv6">
+        <h6>Tesla</h6>
+        <button class="my-button" onclick="orderNow('Tesla.webp', 'Tesla', '7100000')">ORDER NOW</button>
+    </div>
+    <div class="ib7">
+        <img src="Hyundai.jpg" alt="" class="suv7">
+        <h6>Hyundai-X-4</h6>
+        <button class="my-button" onclick="orderNow('Hyundai.jpg', 'Hyundai-X-4', '5100000')">ORDER NOW</button>
+    </div>
+    <div class="ib8">
+        <img src="Jetour.jpg" alt="" class="suv8">
+        <h6>Jetour</h6>
+        <button class="my-button" onclick="orderNow('Jetour.jpg', 'Jetour', '2150000')">ORDER NOW</button>
+    </div>
+    
+    </div>
+    
+       
+   
+    
+</footer>
+
+</body>
+
+</html>

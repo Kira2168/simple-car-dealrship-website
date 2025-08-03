@@ -1,0 +1,48 @@
+/* Remove outline when input is focused */
+.py-4 input:focus {
+    outline: 0;
+    border-color: #4f9ef3; /* Optional: Adding blue border on focus for better UX */
+}
+
+/* Style for successful input (green border) */
+.py-4.success input {
+    border-color: #09c372;
+}
+
+/* Style for input in error (red border) */
+.py-4.error input {
+    border-color: #ff3860;
+}
+
+/* Styling for error message */
+.py-4 .error {
+    color: #ff3860;
+    font-size: 12px; /* Increased font size for better visibility */
+    margin-top: 5px; /* Space between input and error message */
+}
+
+/* Optional: Adjust spacing between the form fields */
+.py-4 {
+    margin-bottom: 8px; /* Adds spacing between form fields */
+}
+
+/* Style for the form button */
+button {
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid #d1d5db;
+}
+
+/* Adjust border color for successful input */
+input.success {
+    border-color: #09c372; /* Green color for success */
+}
+
+/* Adjust border color for error input */
+input.error {
+    border-color: #ff3860; /* Red color for error */
+}
